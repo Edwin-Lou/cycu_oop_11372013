@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1972ea652c5b92c90fcb67dcc27fc8e3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1972ea652c5b92c90fcb67dcc27fc8e3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1972ea652c5b92c90fcb67dcc27fc8e3 = L.map(
+                "map_1972ea652c5b92c90fcb67dcc27fc8e3",
+                {
+                    center: [25.033, 121.5654],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6757252d3d973abba27bf84d2b2d5653 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6757252d3d973abba27bf84d2b2d5653.addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            var circle_marker_345e55bd9fb92928bc73ae42f957e9a1 = L.circleMarker(
+                [25.14506, 121.49262],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_345e55bd9fb92928bc73ae42f957e9a1.bindTooltip(
+                `<div>
+                     貴子坑水土保持園區
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a73ee4c7e2f6c12d9d2a054b9ae7446f = L.circleMarker(
+                [25.145288, 121.4938266],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_a73ee4c7e2f6c12d9d2a054b9ae7446f.bindTooltip(
+                `<div>
+                     秀山里
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_30eaed9176e58a3f6bfd16d46e1863ac = L.circleMarker(
+                [25.144571, 121.497011],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_30eaed9176e58a3f6bfd16d46e1863ac.bindTooltip(
+                `<div>
+                     慈航寺
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aaf57e8139d3cc3c37c7f72918392f0c = L.circleMarker(
+                [25.143537, 121.4980051],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_aaf57e8139d3cc3c37c7f72918392f0c.bindTooltip(
+                `<div>
+                     國泰新村
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9fd386fc19abbd27170e0f024a5fa498 = L.circleMarker(
+                [25.142065, 121.4987552],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_9fd386fc19abbd27170e0f024a5fa498.bindTooltip(
+                `<div>
+                     中和里
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe232b27d97cbdf86d5ece5372261009 = L.circleMarker(
+                [25.140425, 121.500142],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_fe232b27d97cbdf86d5ece5372261009.bindTooltip(
+                `<div>
+                     復興中學
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a9bedfda6624e268d86da84f74d725c = L.circleMarker(
+                [25.139157, 121.5015207],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_6a9bedfda6624e268d86da84f74d725c.bindTooltip(
+                `<div>
+                     中和街
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e3dede32d9a1b79fc881319de351e293 = L.circleMarker(
+                [25.137791, 121.502937],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_e3dede32d9a1b79fc881319de351e293.bindTooltip(
+                `<div>
+                     新北投
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d3d0392db80f41148eb468aee09ed1a = L.circleMarker(
+                [25.136348, 121.5041244],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_7d3d0392db80f41148eb468aee09ed1a.bindTooltip(
+                `<div>
+                     北投公園
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dbf260676c2c8d2176322d03b28c6cc2 = L.circleMarker(
+                [25.134513, 121.5023587],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_dbf260676c2c8d2176322d03b28c6cc2.bindTooltip(
+                `<div>
+                     第一銀行
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bbfe4454219eb89745035ce952b52f9a = L.circleMarker(
+                [25.133615, 121.50136],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_bbfe4454219eb89745035ce952b52f9a.bindTooltip(
+                `<div>
+                     北投國小
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0619adb34bb98d2059cdbebd256d5461 = L.circleMarker(
+                [25.135807, 121.4978915],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_0619adb34bb98d2059cdbebd256d5461.bindTooltip(
+                `<div>
+                     大業中央北路口（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f311e14db33def59dc1159b5893d772e = L.circleMarker(
+                [25.135718, 121.4968066],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_f311e14db33def59dc1159b5893d772e.bindTooltip(
+                `<div>
+                     幼華高中(大業)（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a389fe786973441e8052763615f40efc = L.circleMarker(
+                [25.13174, 121.495841],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_a389fe786973441e8052763615f40efc.bindTooltip(
+                `<div>
+                     大業路(捷運北投站)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4bc6a9c04cba0ecafcba0a77ce784eed = L.circleMarker(
+                [25.12976, 121.49669],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_4bc6a9c04cba0ecafcba0a77ce784eed.bindTooltip(
+                `<div>
+                     大業路(大興街口)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5743caa6e2a0f2d027274728afab639 = L.circleMarker(
+                [25.127225, 121.4978596],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_a5743caa6e2a0f2d027274728afab639.bindTooltip(
+                `<div>
+                     鳳甲美術館
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6f42fe68ee487fe3fc8074591f5507c = L.circleMarker(
+                [25.122429, 121.499222],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_d6f42fe68ee487fe3fc8074591f5507c.bindTooltip(
+                `<div>
+                     大業路(農禪寺)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e8e9b91b349a7bb0d6b60b61039fe008 = L.circleMarker(
+                [25.118907, 121.501973],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_e8e9b91b349a7bb0d6b60b61039fe008.bindTooltip(
+                `<div>
+                     承德公館路口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_269060acc2ca0f8b93d3228e0da5ed4b = L.circleMarker(
+                [25.117433, 121.503568],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_269060acc2ca0f8b93d3228e0da5ed4b.bindTooltip(
+                `<div>
+                     立農國小
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47a04d205553f189f929e72be9acb14a = L.circleMarker(
+                [25.114726, 121.5064388],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_47a04d205553f189f929e72be9acb14a.bindTooltip(
+                `<div>
+                     實踐街口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2ce2bf9089acd1d9a3558c6f584be44f = L.circleMarker(
+                [25.112706, 121.508727],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_2ce2bf9089acd1d9a3558c6f584be44f.bindTooltip(
+                `<div>
+                     承德路七段
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f930640884ca2d0c8c924831f645cce9 = L.circleMarker(
+                [25.109536, 121.512347],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_f930640884ca2d0c8c924831f645cce9.bindTooltip(
+                `<div>
+                     石牌
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dcaf2b13a9c45a501cb7dec869fa19d4 = L.circleMarker(
+                [25.108034, 121.5139733],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_dcaf2b13a9c45a501cb7dec869fa19d4.bindTooltip(
+                `<div>
+                     文林國小
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4faf2df803b879f8591e19de6e4a621e = L.circleMarker(
+                [25.105059, 121.517803],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_4faf2df803b879f8591e19de6e4a621e.bindTooltip(
+                `<div>
+                     中正高中（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de91056b5691ac64edcd268b0c5e5957 = L.circleMarker(
+                [25.102263, 121.5204736],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_de91056b5691ac64edcd268b0c5e5957.bindTooltip(
+                `<div>
+                     捷運芝山站(戲曲中心)（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a26349ac79bacae004cd7a1f86fbd5d = L.circleMarker(
+                [25.100849, 121.5223075],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_5a26349ac79bacae004cd7a1f86fbd5d.bindTooltip(
+                `<div>
+                     捷運芝山站一
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_df5b279f79b20b44bbbced4cbfbcfb44 = L.marker(
+                [25.095911, 121.5242793],
+                {
+}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+        var custom_icon_69ed06cd5283132f9588c13ca89d6509 = L.icon({
+  "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAyUlEQVR4nO2XwQ6DMAxD42j//8ueJnFArBtVkwaL8m5woE+tageQNGXcxHETx00cN3FeWR8C8HXbSEJiB9GQ+/e+VBAnElHJkCA6F49Iyl8SN3HcxHG7syA7cy6Sh+Ed5Mni0bBOOWL+kMhoEmTPg9gyL0Pu/pekgrUEkTC9TBPEQS5Ldq15kI1okZkHeZDbP182D3KT6GmSUcmyLuZgs5TkIK+cZmazliCeJknOQ6g2CRMlnyaxoGT6P0mLj9xoWJcIRlgrqG0CbybgekeTsuYAAAAAAElFTkSuQmCC",
+  "iconSize": [50, 50],
+});
+        marker_df5b279f79b20b44bbbced4cbfbcfb44.setIcon(custom_icon_69ed06cd5283132f9588c13ca89d6509);
+        
+    
+            marker_df5b279f79b20b44bbbced4cbfbcfb44.bindTooltip(
+                `<div>
+                     士林
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df5b279f79b20b44bbbced4cbfbcfb44.setIcon(custom_icon_69ed06cd5283132f9588c13ca89d6509);
+            
+    
+            var circle_marker_5b1936162bfbf7680054f5be35480ead = L.circleMarker(
+                [25.090999, 121.526725],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_5b1936162bfbf7680054f5be35480ead.bindTooltip(
+                `<div>
+                     小北街
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a143fdc2f524290c8b1771d3e5f61f3 = L.circleMarker(
+                [25.084849, 121.524748],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_8a143fdc2f524290c8b1771d3e5f61f3.bindTooltip(
+                `<div>
+                     捷運劍潭站(北藝中心)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_19e70e55a7736d6c1e6a5c923f9843c1 = L.circleMarker(
+                [25.083468, 121.5233264],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_19e70e55a7736d6c1e6a5c923f9843c1.bindTooltip(
+                `<div>
+                     圓山皇宮大廈
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_703e866eb3d85dc1e0cad73831b44aa2 = L.circleMarker(
+                [25.081056, 121.5223096],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_703e866eb3d85dc1e0cad73831b44aa2.bindTooltip(
+                `<div>
+                     劍潭國小
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15b34117d40be07a18d32a9260f0d9e7 = L.circleMarker(
+                [25.07344, 121.5191524],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_15b34117d40be07a18d32a9260f0d9e7.bindTooltip(
+                `<div>
+                     明倫高中（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d9c891f1986eb3d3419f5f8eec7b1d6 = L.circleMarker(
+                [25.071066, 121.5183341],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_8d9c891f1986eb3d3419f5f8eec7b1d6.bindTooltip(
+                `<div>
+                     庫倫街口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_28ad73a3971a6eb0e5217bcc3e33b79f = L.circleMarker(
+                [25.067913, 121.5182673],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_28ad73a3971a6eb0e5217bcc3e33b79f.bindTooltip(
+                `<div>
+                     民族承德路口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3571ac882f026f7e582b8416134d2245 = L.circleMarker(
+                [25.064874, 121.5181],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_3571ac882f026f7e582b8416134d2245.bindTooltip(
+                `<div>
+                     大同國小
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b4b5e4e7de8cdf80700a005dc947d84 = L.circleMarker(
+                [25.062226, 121.518152],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_3b4b5e4e7de8cdf80700a005dc947d84.bindTooltip(
+                `<div>
+                     成淵高中
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_162662944d6d5fc55511efd9e5eeaa63 = L.circleMarker(
+                [25.056725, 121.5179896],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_162662944d6d5fc55511efd9e5eeaa63.bindTooltip(
+                `<div>
+                     民生西路口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ab2825295bf47b31ea09214b9da473c = L.circleMarker(
+                [25.05271, 121.5196749],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_8ab2825295bf47b31ea09214b9da473c.bindTooltip(
+                `<div>
+                     捷運中山站(志仁高中)（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_252dc76812de5f0a8accfdc9945c26ad = L.circleMarker(
+                [25.052069, 121.5250604],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_252dc76812de5f0a8accfdc9945c26ad.bindTooltip(
+                `<div>
+                     南京林森路口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8f1ce5d1db319d684273f32cbefce397 = L.circleMarker(
+                [25.052007, 121.529855],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_8f1ce5d1db319d684273f32cbefce397.bindTooltip(
+                `<div>
+                     南京吉林路口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07494b9e54a6f493bd9118dde3082c0f = L.circleMarker(
+                [25.051969, 121.5327305],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_07494b9e54a6f493bd9118dde3082c0f.bindTooltip(
+                `<div>
+                     捷運松江南京站
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2bffa9c2456b2b9c29bbf4d2b0388f31 = L.circleMarker(
+                [25.051938, 121.5362725],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_2bffa9c2456b2b9c29bbf4d2b0388f31.bindTooltip(
+                `<div>
+                     南京建國路口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_563067f092c12dc8e6ad37fb90c24e45 = L.circleMarker(
+                [25.051888, 121.5401689],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_563067f092c12dc8e6ad37fb90c24e45.bindTooltip(
+                `<div>
+                     南京龍江路口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cdee26f5557d7632a96d69c6c4cc282b = L.circleMarker(
+                [25.051804, 121.5435614],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_cdee26f5557d7632a96d69c6c4cc282b.bindTooltip(
+                `<div>
+                     捷運南京復興站
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e497d75ed0098618f086b586bbf7bc8c = L.circleMarker(
+                [25.051703, 121.5483534],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_e497d75ed0098618f086b586bbf7bc8c.bindTooltip(
+                `<div>
+                     南京敦化路口(小巨蛋)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bc978c324e808a5b27181faf46a15c3d = L.circleMarker(
+                [25.051548, 121.5547373],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_bc978c324e808a5b27181faf46a15c3d.bindTooltip(
+                `<div>
+                     南京寧安街口（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aaff1e4a66ee5e46eda31742699a3ee3 = L.circleMarker(
+                [25.04937, 121.55774],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_aaff1e4a66ee5e46eda31742699a3ee3.bindTooltip(
+                `<div>
+                     博仁醫院
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8266892b645066e3b5cd2548cfe171c1 = L.circleMarker(
+                [25.04762, 121.5577342],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_8266892b645066e3b5cd2548cfe171c1.bindTooltip(
+                `<div>
+                     臺北市區監理所(光復)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_147934bb31f57bd77a2ffd46a0359fc5 = L.circleMarker(
+                [25.042558, 121.557568],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_147934bb31f57bd77a2ffd46a0359fc5.bindTooltip(
+                `<div>
+                     捷運國父紀念館站(光復)（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_adbaafca00932d7df9ea0928f52d427c = L.circleMarker(
+                [25.039009, 121.5574996],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_adbaafca00932d7df9ea0928f52d427c.bindTooltip(
+                `<div>
+                     國父紀念館（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52bd2cf5c43ec01f93ee114a73e76b38 = L.circleMarker(
+                [25.03669, 121.55745],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_52bd2cf5c43ec01f93ee114a73e76b38.bindTooltip(
+                `<div>
+                     市民住宅
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_641149cb2d3136d32497d32cca624d6d = L.circleMarker(
+                [25.034098, 121.5573365],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_641149cb2d3136d32497d32cca624d6d.bindTooltip(
+                `<div>
+                     三張犁
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c8111cf603c9adff28c8ea927e7a247 = L.circleMarker(
+                [25.031446, 121.56127],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_6c8111cf603c9adff28c8ea927e7a247.bindTooltip(
+                `<div>
+                     世貿中心(莊敬)（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_97f5bcbbc245a5b7fd8e74aeafbcce71 = L.circleMarker(
+                [25.02923, 121.5624103],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_97f5bcbbc245a5b7fd8e74aeafbcce71.bindTooltip(
+                `<div>
+                     景新里（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c3812ef8efb2526af5c4a9d6608c6e0c = L.circleMarker(
+                [25.028273, 121.5632643],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_c3812ef8efb2526af5c4a9d6608c6e0c.bindTooltip(
+                `<div>
+                     臺北醫學大學（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ab48aeae0fdc14b0161eb261a255632e = L.circleMarker(
+                [25.027402, 121.565724],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_ab48aeae0fdc14b0161eb261a255632e.bindTooltip(
+                `<div>
+                     信義國中(莊敬)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_34a29aac55b6fc5220b436f0b004a2bb = L.circleMarker(
+                [25.026231, 121.568554],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_34a29aac55b6fc5220b436f0b004a2bb.bindTooltip(
+                `<div>
+                     吳興國小(松仁)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_62e015a51990f7b85ad801215eb1da2c = L.circleMarker(
+                [25.024432, 121.569585],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_62e015a51990f7b85ad801215eb1da2c.bindTooltip(
+                `<div>
+                     松仁路
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d1e6ba0d528b1096c9e23543836e5a0 = L.circleMarker(
+                [25.02453, 121.5695997],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_0d1e6ba0d528b1096c9e23543836e5a0.bindTooltip(
+                `<div>
+                     松仁路
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_903560789cf3b8bd91402893d6cb2802 = L.circleMarker(
+                [25.026234, 121.568628],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_903560789cf3b8bd91402893d6cb2802.bindTooltip(
+                `<div>
+                     吳興國小(松仁)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d242d0aec0baf34be96bb547cc0c265 = L.circleMarker(
+                [25.02881, 121.568464],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_8d242d0aec0baf34be96bb547cc0c265.bindTooltip(
+                `<div>
+                     信義國中(松仁)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f8adf1960d5d28bcc85a129672b520d = L.circleMarker(
+                [25.03124, 121.56839],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_6f8adf1960d5d28bcc85a129672b520d.bindTooltip(
+                `<div>
+                     松平路口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca83d6c2fc1092034bc777b64afa2e47 = L.circleMarker(
+                [25.03369, 121.5684464],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_ca83d6c2fc1092034bc777b64afa2e47.bindTooltip(
+                `<div>
+                     信義松仁路口(松仁)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75b5b6168b5d61a9a5bb5a8ebbb65232 = L.circleMarker(
+                [25.035881, 121.5666401],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_75b5b6168b5d61a9a5bb5a8ebbb65232.bindTooltip(
+                `<div>
+                     松壽路口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_32e70d4738b0d5920aeeaffea6a7f00b = L.circleMarker(
+                [25.035907, 121.5646562],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_32e70d4738b0d5920aeeaffea6a7f00b.bindTooltip(
+                `<div>
+                     市政府(松壽)（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e133ace59e18680f50fe6654ec3bbd93 = L.circleMarker(
+                [25.038366, 121.5636251],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_e133ace59e18680f50fe6654ec3bbd93.bindTooltip(
+                `<div>
+                     市政府(市府)（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6475684cfb99ccf6cea4c98f520b7ca = L.circleMarker(
+                [25.041057, 121.5653493],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+            circle_marker_a6475684cfb99ccf6cea4c98f520b7ca.bindTooltip(
+                `<div>
+                     捷運市政府站（進站中）
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a56a3dd148813840fd619710c084617d = L.marker(
+                [25.07344, 121.5191524],
+                {
+}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+        
+    
+        var custom_icon_301770a122abbd8f2bbf7bb2d0ede81f = L.icon({
+  "iconUrl": "data:image/jpg;base64,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",
+  "iconSize": [40, 40],
+});
+        marker_a56a3dd148813840fd619710c084617d.setIcon(custom_icon_301770a122abbd8f2bbf7bb2d0ede81f);
+        
+    
+            marker_a56a3dd148813840fd619710c084617d.bindTooltip(
+                `<div>
+                     最近進站中的公車
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a56a3dd148813840fd619710c084617d.setIcon(custom_icon_301770a122abbd8f2bbf7bb2d0ede81f);
+            
+    
+            var layer_control_bae023b7e49ff677191b60a6261fde04_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_6757252d3d973abba27bf84d2b2d5653,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_bae023b7e49ff677191b60a6261fde04 = L.control.layers(
+                layer_control_bae023b7e49ff677191b60a6261fde04_layers.base_layers,
+                layer_control_bae023b7e49ff677191b60a6261fde04_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_1972ea652c5b92c90fcb67dcc27fc8e3);
+
+        
+</script>
+</html>
