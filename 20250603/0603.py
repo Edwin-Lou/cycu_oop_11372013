@@ -1,9 +1,9 @@
 import asyncio
+from bs4 import BeautifulSoup
+from playwright.async_api import async_playwright
 import csv
 import os
 import folium
-from bs4 import BeautifulSoup
-from playwright.async_api import async_playwright
 
 CSV_PATH = r"C:\Users\User\Desktop\cycu_oop_11372013\20250603\all_bus_stops_by_route.csv"
 ROUTE_MAP_CSV = r"C:\Users\User\Desktop\cycu_oop_11372013\20250603\taipei_bus_routes.csv"
@@ -95,7 +95,9 @@ async def get_bus_route_stops(route_id: str) -> dict:
                     "站名": spans[2].get_text(strip=True),
                     "站牌ID": inputs[0]['value'],
                     "lat": float(inputs[1]['value']),
-                    "lon": float(inputs[2]['value'])})
+                    "lon": float(inputs[2]['value']),
+                    "到站時間": spans[0].get_text(strip=True)  # 加入即時到站時間欄位
+                })
     return result
 
 def plot_combined_segment_map(route_id, route_data, start_name, dest_name, output_path):
@@ -161,7 +163,7 @@ def plot_combined_segment_map(route_id, route_data, start_name, dest_name, outpu
     m.save(output_path)
     return output_path
 
-async def find_direct_bus():
+async def find_direct_bus_with_arrival_time_and_map():
     print("📍 請選擇出發與目的地站牌：\n")
     start_name, start_id = choose_stop_id("出發地")
     if not start_id:
@@ -173,32 +175,46 @@ async def find_direct_bus():
     print(f"\n出發地站牌ID: {start_id}，目的地站牌ID: {dest_id}")
 
     print("\n正在查詢公車路線...")
-    routes_1 = await fetch_bus_routes(start_id)
-    routes_2 = await fetch_bus_routes(dest_id)
+    routes_start = await fetch_bus_routes(start_id)
+    routes_dest = await fetch_bus_routes(dest_id)
 
-    common_routes = routes_1.intersection(routes_2)
+    common_routes = routes_start.intersection(routes_dest)
     route_map = load_route_mapping(ROUTE_MAP_CSV)
 
-    if common_routes:
-        print("\n✅ 以下公車可直達兩站：")
-        for route in sorted(common_routes):
-            route_code = route_map.get(route, "（查無代碼）")
-            print(f"{route} → 公車代碼：{route_code}")
-
-        if input("\n是否繪製路線段圖？（y/n）：").strip().lower() == "y":
-            for route in common_routes:
-                print(f"\n🚌 正在處理路線：{route} ...")
-                route_id = route_map.get(route)
-                if not route_id or not route_id.isdigit():
-                    print(f"⚠️ 無法取得路線代碼：{route}")
-                    continue
-
-                route_data = await get_bus_route_stops(route_id)
-                map_file = os.path.join(os.path.expanduser("~"), "Desktop", f"直達公車_{route}_區段圖.html")
-                plot_combined_segment_map(route_id, route_data, start_name, dest_name, map_file)
-                print(f"✅ 地圖已儲存至：{map_file}")
-    else:
+    if not common_routes:
         print("\n❌ 無公車可直達兩站。")
+        return
+
+    print("\n✅ 以下公車可直達兩站：")
+    for route_name in sorted(common_routes):
+        route_code = route_map.get(route_name, None)
+        if not route_code or not route_code.isdigit():
+            print(f"{route_name} → （無法取得有效代碼，無法查詢到站時間）")
+            continue
+
+        # 取得路線所有站牌資訊（包含即時到站時間）
+        route_stops = await get_bus_route_stops(route_code)
+
+        # 找出出發地在去程或返程的哪個方向，並取出該站的到站時間
+        arrival_time = None
+        for direction in ["去程", "返程"]:
+            for stop in route_stops[direction]:
+                if stop["站名"] == start_name:
+                    arrival_time = stop.get("到站時間", None)
+                    break
+            if arrival_time:
+                break
+
+        if arrival_time:
+            print(f"{route_name}（代碼 {route_code}）→ 起點站即將到站時間：{arrival_time}")
+        else:
+            print(f"{route_name}（代碼 {route_code}）→ 找不到起點站的即時到站時間資料。")
+
+        # 繪製該路線段圖
+        print(f"🗺️ 正在繪製路線圖 {route_name} ...")
+        map_file = os.path.join(os.path.expanduser("~"), "Desktop", f"直達公車_{route_name}_區段圖.html")
+        plot_combined_segment_map(route_code, route_stops, start_name, dest_name, map_file)
+        print(f"✅ 地圖已儲存至：{map_file}")
 
 if __name__ == "__main__":
-    asyncio.run(find_direct_bus())
+    asyncio.run(find_direct_bus_with_arrival_time_and_map())

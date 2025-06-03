@@ -5,8 +5,8 @@ import csv
 import os
 import folium
 
-CSV_PATH = r"C:\Users\User\Desktop\cycu_oop_11372013\20250603\all_bus_stops_by_route.csv"
-ROUTE_MAP_CSV = r"C:\Users\User\Desktop\cycu_oop_11372013\20250603\taipei_bus_routes.csv"
+CSV_PATH = r"C:\Users\User\Desktop\cycu_oop_11372004\final_report\all_bus_stops_by_route.csv"
+ROUTE_MAP_CSV = r"C:\Users\User\Desktop\cycu_oop_11372004\final_report\taipei_bus_routes.csv"
 
 def list_stop_options_by_name(stop_name):
     unique_ids = set()

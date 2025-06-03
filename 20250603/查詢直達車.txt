@@ -5,8 +5,8 @@ import csv
 import os
 import folium
 
-CSV_PATH = r"C:\Users\User\Desktop\cycu_oop_11372013\20250603\all_bus_stops_by_route.csv"
-ROUTE_MAP_CSV = r"C:\Users\User\Desktop\cycu_oop_11372013\20250603\taipei_bus_routes.csv"
+CSV_PATH = r"C:\Users\User\Desktop\cycu_oop_11372011\Final report\all_bus_stops_by_route.csv"
+ROUTE_MAP_CSV = r"C:\Users\User\Desktop\cycu_oop_11372011\Final report\taipei_bus_routes.csv"
 
 def list_stop_options_by_name(stop_name):
     unique_ids = set()
@@ -74,7 +74,7 @@ async def get_bus_route_stops(route_id: str) -> dict:
         await page.goto(url)
 
         try:
-            await page.wait_for_selector("div#GoDirectionRoute li, div#BackDirectionRoute li", timeout=50000)
+            await page.wait_for_selector("div#GoDirectionRoute li, div#BackDirectionRoute li", timeout=10000)
         except:
             print("無法載入公車站牌頁面，請確認路線代碼是否正確。")
             return result
@@ -89,19 +89,6 @@ async def get_bus_route_stops(route_id: str) -> dict:
         for idx, li in enumerate(station_items, start=1):
             spans = li.select("span.auto-list-stationlist span")
             inputs = li.select("input")
-
-            # 判斷即時時間欄位，去程通常 spans[0] 是即時時間，返程如果抓不到用 fallback
-            arrival_time = "無資料"
-            try:
-                if direction == "去程":
-                    arrival_time = spans[0].get_text(strip=True)
-                elif direction == "返程":
-                    arrival_time = spans[0].get_text(strip=True)
-                    if not arrival_time:
-                        arrival_time = spans[1].get_text(strip=True) if len(spans) > 1 else "無資料"
-            except Exception:
-                pass
-
             if len(spans) >= 3 and len(inputs) >= 3:
                 result[direction].append({
                     "順序": idx,
@@ -109,7 +96,7 @@ async def get_bus_route_stops(route_id: str) -> dict:
                     "站牌ID": inputs[0]['value'],
                     "lat": float(inputs[1]['value']),
                     "lon": float(inputs[2]['value']),
-                    "到站時間": arrival_time
+                    "到站時間": spans[0].get_text(strip=True)  # 加入即時到站時間欄位
                 })
     return result
 
@@ -146,7 +133,7 @@ def plot_combined_segment_map(route_id, route_data, start_name, dest_name, outpu
             fill=True,
             fill_color=segment_color,
             fill_opacity=0.7
-        ).add_child(folium.Popup(f'{valid_direction}：{stop["站名"]}\n即時到站時間：{stop.get("到站時間", "無資料")}')).add_to(m)
+        ).add_child(folium.Popup(f'{valid_direction}：{stop["站名"]}')).add_to(m)
 
         folium.map.Marker(
             [stop["lat"], stop["lon"]],
@@ -155,19 +142,21 @@ def plot_combined_segment_map(route_id, route_data, start_name, dest_name, outpu
                 text-align:center; line-height:18px;">{i}</div>""")
         ).add_to(m)
 
+    # 畫整條路線（實線）
     folium.PolyLine(coords_all, color=segment_color, weight=4, opacity=0.9).add_to(m)
 
+    # 起訖點圖示
     for stop in all_stops:
         if stop["站名"] == start_name:
             folium.Marker(
                 location=[stop['lat'], stop['lon']],
-                popup=f"起點站：{stop['站名']}\n即時到站時間：{stop.get('到站時間', '無資料')}",
+                popup=f"起點站：{stop['站名']}",
                 icon=folium.Icon(color="green", icon="play")
             ).add_to(m)
         if stop["站名"] == dest_name:
             folium.Marker(
                 location=[stop['lat'], stop['lon']],
-                popup=f"終點站：{stop['站名']}\n即時到站時間：{stop.get('到站時間', '無資料')}",
+                popup=f"終點站：{stop['站名']}",
                 icon=folium.Icon(color="darkred", icon="flag")
             ).add_to(m)
 
@@ -203,36 +192,28 @@ async def find_direct_bus_with_arrival_time_and_map():
             print(f"{route_name} → （無法取得有效代碼，無法查詢到站時間）")
             continue
 
+        # 取得路線所有站牌資訊（包含即時到站時間）
         route_stops = await get_bus_route_stops(route_code)
 
-        valid_direction = None
+        # 找出出發地在去程或返程的哪個方向，並取出該站的到站時間
+        arrival_time = None
         for direction in ["去程", "返程"]:
-            stops = route_stops.get(direction, [])
-            try:
-                idx_start = next(i for i, stop in enumerate(stops) if stop["站名"] == start_name)
-                idx_dest = next(i for i, stop in enumerate(stops) if stop["站名"] == dest_name)
-                if idx_start < idx_dest:
-                    if all(stop.get("到站時間", "") in ("", "無資料") for stop in stops):
-                        continue
-                    valid_direction = direction
+            for stop in route_stops[direction]:
+                if stop["站名"] == start_name:
+                    arrival_time = stop.get("到站時間", None)
                     break
-            except StopIteration:
-                continue
+            if arrival_time:
+                break
 
-        if not valid_direction:
-            print(f"{route_name}（代碼 {route_code}）→ 無法找到先到出發地再到目的地且有即時資料的方向，跳過此路線。")
-            continue
+        if arrival_time:
+            print(f"{route_name}（代碼 {route_code}）→ 起點站即將到站時間：{arrival_time}")
+        else:
+            print(f"{route_name}（代碼 {route_code}）→ 找不到起點站的即時到站時間資料。")
 
-        filtered_stops = route_stops[valid_direction]
-
-        print(f"{route_name}（代碼 {route_code}）→ {valid_direction} 各站即將到站時間：")
-        for stop in filtered_stops:
-            arrival = stop.get("到站時間", "無資料")
-            print(f"  {stop['順序']}. {stop['站名']} → {arrival}")
-
+        # 繪製該路線段圖
         print(f"🗺️ 正在繪製路線圖 {route_name} ...")
-        map_file = os.path.join(os.path.expanduser("~"), "Desktop", f"直達公車_{route_name}_{valid_direction}_區段圖.html")
-        plot_combined_segment_map(route_code, {valid_direction: filtered_stops}, start_name, dest_name, map_file)
+        map_file = os.path.join(os.path.expanduser("~"), "Desktop", f"直達公車_{route_name}_區段圖.html")
+        plot_combined_segment_map(route_code, route_stops, start_name, dest_name, map_file)
         print(f"✅ 地圖已儲存至：{map_file}")
 
 if __name__ == "__main__":
